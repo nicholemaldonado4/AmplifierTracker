@@ -66,12 +66,10 @@
             $result = $db->connect();
             
             if ($result === "") {
-                
                 $query = "INSERT INTO AmpsAndAnt (Barcode, StartFrequencyRange, EndFrequencyRange, " .
                         "ModelNumber, Manufacturer, SerialNumber, Type, Location) VALUES (\"{$this->barcode}\", " .
                         "{$this->freqStart}, {$this->freqEnd}, {$this->modelNum}, \"{$this->manufacturer}\", {$this->sn}, \"{$this->type}\", " .
                         "\"{$this->loc}\")";
-                echo $query;
                 if($db->getCon()->query($query) === False){
                     echo $db->getCon()->error;
                 }

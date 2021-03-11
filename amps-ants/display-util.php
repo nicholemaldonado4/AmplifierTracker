@@ -1,8 +1,9 @@
 <?php
     require_once dirname(__DIR__)."/database-connector.php";
 
-    function determineAmpOrAnt() {        
+    function determineAmpOrAnt() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            session_start();
             $_SESSION["POST_loc"] = $_POST["loc"];
             $_SESSION["POST_type"] = $_POST["type"];
             header("Location: display.php");
@@ -34,20 +35,20 @@
                     }
                     
                 }
-                if ($typeSet && $_SESSION["POST_type"] === "") {
-                    echo "<div class=\"grid-item\"><h3>Type</h3></div>";
-                }
+                $hideType = (!$typeSet || ($typeSet && $_SESSION["POST_type"] === "")) ? "" : " hide";
                 if ($result = $db->getCon()->query($query)) {
+                    $makeAccent = true;
                     while($row = $result->fetch_assoc()) {
-                        echo "<div ><input class=\"radio-btn\" id=\"{$row["Barcode"]}\" type=\"radio\" name=\"record_selector\" value=\"{$row["Barcode"]}\"><div class=\"rect-selector {$row["Barcode"]}\"></div></div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["Barcode"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["StartFrequencyRange"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["ModelNumber"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["Manufacturer"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["SerialNumber"]}</div>";
-                        if ($typeSet && $_SESSION["POST_type"] === "") {
-                            echo "<div class=\"grid-item {$row["Barcode"]}\">{$row["Type"]}</div>";
-                        }
+                        $rowColor = $makeAccent ? "accent-row" : "reg-row";
+                        echo "<div class=\"dot-container {$row["Barcode"]}\"><input class=\"radio-btn\" id=\"rec-{$row["Barcode"]}\" type=\"radio\" name=\"record_selector\" value=\"{$row["Barcode"]}\"><div class=\"dot-selector {$row["Barcode"]} selector-dim\"><div class=\"inner-dot\"></div></div></div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["Barcode"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["StartFrequencyRange"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["ModelNumber"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["Manufacturer"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["SerialNumber"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}{$hideType}\">{$row["Type"]}</div>";
+                        echo "<div class=\"loc-radio-btn {$rowColor}\"><input id=\"loc-{$row["Barcode"]}\" type=\"radio\" name=\"equip-type\" value=\"{$row["Type"]}\"></div>";
+                        $makeAccent = !$makeAccent;
                     }
                     mysqli_free_result($result);
                 }
@@ -57,19 +58,27 @@
     }
     
     function getHeading() {
-        return (($_SESSION["POST_type"] === "") ? "Amplifiers and Antennas" : $_SESSION["POST_type"]."s").": ".$_SESSION["POST_loc"];
+        return ($_SESSION["POST_type"] !== "" ? $_SESSION["POST_type"]."s" : "Amplifiers and Antennas").": ".$_SESSION["POST_loc"];
     }
     
+// If type set, 
     function showType() {
-        return (isset($_SESSION["POST_type"]) && $_SESSION["POST_type"] === "") ? " extra-grid" : "";
+        return $_SESSION["POST_type"] !== "" ? "" : " extra-grid";
     }
 
     function getEquipType() {
-        return isset($_SESSION["POST_type"]) ? $_SESSION["POST_type"] : "";
+        return $_SESSION["POST_type"];
     }
 
     function getLocation() {
-        return isset($_SESSION["POST_loc"]) ? $_SESSION["POST_loc"] : "";
+        return $_SESSION["POST_loc"];
+    }
+
+    function addTypeCol() {
+//        if (!isset($_SESSION["POST_type"]) || (isset($_SESSION["POST_type"]) && $_SESSION["POST_type"] === "")) {
+//            echo "<div class=\"grid-item\"><h3>Type</h3></div>";
+//        }
+        return $_SESSION["POST_type"] === "" ? "<div class=\"grid-item\"><h3>Type</h3></div>" : "";
     }
 
 ?>

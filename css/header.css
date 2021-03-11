@@ -1,0 +1,225 @@
+:root {
+/*
+    --clr-primary-200: #F3EED9;
+    --clr-primary-400: #824936;
+    --clr-neutral-100: #FFF;
+    --clr-neutral-900: #222C2A;
+    
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+    */
+    
+/*
+    --clr-dark-grey: #2D2D2D;
+    --clr-light-grey: #F2F2F2;
+    --clr-med-grey: #919191;  #919191 
+    --clr-med-light-grey: #dadee0;
+    --clr-nav-bar-light-selection: #E8E8E8;
+    --clr-orange: #FF9035;
+    --clr-med-orange: #ea833d;
+    --clr-dark-blue: #001a26;
+    --clr-med-dark-blue: #023354;
+    
+*/
+    
+/*
+    --ff-accent: 'Indie Flower', sans-serif;
+    --ff-primary: 'Open Sans', serif;
+    --ff-yellow: 'Yellowtail', sans-serif;
+    --ff-open: 'Open Sans', serif;
+    
+*/
+/*    font-size: 62.5%;*/
+    --clr-dark: #333;
+    --clr-dark-grey: #2D2D2D;
+    --ff-accent: 'Merriweather Sans', sans-serif;
+    --ff-primary: 'Merriweather', serif;
+    --ff-title: "Patua One", serif;
+    
+    --clr-orange: #ff9245;
+    --clr-med-orange: #eb8136;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: var(--clr-orange);
+    height: 4rem;
+}
+
+.logo  {
+    white-space: nowrap;
+    font-size: 3rem;
+    font-family: var(--ff-title);
+    padding-left: 10px;
+    color: white;
+}
+
+.logo-holder {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+.item span,
+.item a {
+    font-size: 1.5rem; 
+    color: white;
+}
+
+.item:hover {
+    background: var(--clr-med-orange);
+}
+
+.fa-bars {
+    color:white;
+    height: 30px;
+}
+
+.nav_bar_list span {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav_bar_list span,
+.nav_bar_list li a {
+    text-decoration: none;
+    display: block;
+}
+.nav_bar_list li .subitem a {
+    padding: 15px;
+}
+
+.subitem {
+    list-style-type: none;
+}
+
+.nav_bar_list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+}
+
+
+.toggle {
+    order: 1;
+    display: block;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.item {
+    order: 2;
+    width: 100%;
+    display: none;
+    font-family: var(--ff-accent);
+    white-space: nowrap;
+    padding: 10px 15px;
+}
+ 
+.active .item  {
+    display: block;
+}
+
+
+.submenu {
+    display: none;
+}
+
+.submenu_active .submenu {
+    display: block;
+}
+
+
+
+
+.has_submenu > span::after {
+    
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900; 
+    content: " \f078";
+    color: white;
+}
+
+.nav_bar_list .hide {
+    display: none;
+}
+
+.nav_bar_list.active {
+    background-color: var(--clr-orange);
+}
+
+@media all and (min-width: 900px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap:nowrap;
+    }
+    
+    
+    .nav_bar_list {      
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items:center;
+    }
+   
+    
+    .active .item, .item {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        width: 100%;
+        position: relative;
+
+    }
+    
+    .logo-holder {
+        display: block;
+    }
+
+    
+    .submenu_active .submenu {
+        position: absolute;
+        display: block;
+        background-color: var(--clr-med-orange);
+        width: 100%;
+        top:3.9rem;
+        left:0px;
+    }
+    
+    .toggle {
+        display: none;
+        order: 2;
+    }
+    
+    .submenu_active {
+        border-radius: 0;
+    }
+}

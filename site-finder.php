@@ -7,7 +7,7 @@
         $result = $db->connect();
         if ($result === "") {
             if ($result = $db->getCon()->query("SELECT Location FROM Location")) {
-                
+                echo "Hello";
                 while($row = $result->fetch_assoc()) {
                     echo "<option value=\"{$row["Location"]}\">";
                 }

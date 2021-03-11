@@ -1,0 +1,204 @@
+:root {
+/*
+    --clr-primary-200: #F3EED9;
+    --clr-primary-400: #824936;
+    --clr-neutral-100: #FFF;
+    --clr-neutral-900: #222C2A;
+    
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+    */
+    
+/*
+    --clr-dark-grey: #2D2D2D;
+    --clr-light-grey: #F2F2F2;
+    --clr-med-grey: #919191;  #919191 
+    --clr-med-light-grey: #dadee0;
+    --clr-nav-bar-light-selection: #E8E8E8;
+    --clr-orange: #FF9035;
+    --clr-med-orange: #ea833d;
+    --clr-dark-blue: #001a26;
+    --clr-med-dark-blue: #023354;
+    
+*/
+    
+/*
+    --ff-accent: 'Indie Flower', sans-serif;
+    --ff-primary: 'Open Sans', serif;
+    --ff-yellow: 'Yellowtail', sans-serif;
+    --ff-open: 'Open Sans', serif;
+    
+*/
+/*    font-size: 62.5%;*/
+/*
+    --clr-dark: #333;
+    --clr-dark-grey: #2D2D2D;
+*/
+}
+
+/*
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+.page-container {
+    border: solid;
+    border-color: green;
+    height: 100vh; 
+    margin: 0; 
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+}
+
+
+footer{
+/*  margin-top:auto; */
+    border: solid;
+    border-color: red;
+}
+
+/*
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: solid;
+    border-color: red;
+    height: 50px;
+}
+*/
+
+footer button {
+    margin: 10px;
+    padding: 10px 24px;
+    font-size: 1.5rem;
+}
+
+/*
+.content-wrapper {
+    padding-bottom: 50px;
+}
+*/
+
+.record-title-grid {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    grid-template-rows: minmax(30px, max-content);
+    overflow-y: scroll;
+}
+
+.record-grid-container {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    grid-auto-rows: minmax(80px, max-content);
+    overflow-y: scroll;
+}
+
+
+.hide {
+    display: none;
+}
+
+.radio-btn {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+}
+
+.selector-dim {
+    height: 100%;
+    width: 25px;
+}
+
+.rect-selector {
+    background-color: #555;
+}
+
+.radio-btn:checked + .rect-selector {
+    background-color: red;
+
+}
+
+.add-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.add-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    width: 80%; 
+    font-size: 1.6rem;
+}
+
+.grid-item {
+    border: solid;
+    border-color: blue;
+    font-size: 1.6rem;
+/*    padding-bottom: 200px;*/
+}
+
+h2 {
+    margin: 15px;
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.63rem;
+}
+
+#add-rec-form {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.add-modal-content input[type=text] {
+    width: 100%;
+}
+
+#add-rec-form label {
+    white-space: nowrap;
+}
+
+.left {
+    text-align: right;
+}
+.add-modal-content input[name=freq-start], .add-modal-content input[name=freq-end] {
+    width: 48%;
+}
+
+.add-modal-content input[name=freq-end] {
+    float: right;
+}
+
+@media all and (min-width: 680px) {
+    .add-modal-content {
+        width: 534px; 
+        border: solid;
+        border-color: green;
+
+    }
+}
+
+@media all and (min-width: 960px) {
+    
+
+}
+
