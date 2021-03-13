@@ -3,8 +3,8 @@ const addModal = document.querySelector(".add-modal");
 
 function clickRadioBtn() {
     if (this.classList.length > 1) {
-            $("#" + this.classList.item(1)).click();
-        }
+        document.getElementById("log-" + this.classList.item(1)).click();
+    }
 }
 
 function showAddRecordModal() {
@@ -16,7 +16,7 @@ addBtn.addEventListener("click", showAddRecordModal, false);
 $(document).ready(function() {
     $(".grid-item").click(clickRadioBtn);
     
-    $(".rect-selector").click(clickRadioBtn);
+    $(".dot-container").click(clickRadioBtn);
     
      $("#record-form").submit(function(e) {
         // Prevent event action of going to same page.
