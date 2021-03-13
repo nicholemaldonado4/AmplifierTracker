@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Staatliches|Patua+One" rel="stylesheet">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/amps-ants/display.css">
+    <link rel="stylesheet" href="../css/amps-ants/table.css">
 </head>
 <body>
     <div class="page-container">
