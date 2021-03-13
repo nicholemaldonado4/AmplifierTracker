@@ -150,6 +150,12 @@ footer button, footer input[type="submit"] {
 
  }
 
+.radio-btn {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+}
+
 @media all and (min-width: 680px) {
    
 }

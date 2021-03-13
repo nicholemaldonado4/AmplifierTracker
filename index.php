@@ -28,26 +28,26 @@
             
             <div class="inner-modal">
                 <div id="close-box"><i class="fas fa-times"></i></div>
-                    <div class="modal-tabs">
-                        <div class="tab" id="login-tab"><span>Login</span></div>
-                        <div class="tab tinted" id="signup-tab"><span>Sign Up</span></div>
-                    </div>
-                    <div class="modal-form" id="login-div">
-                        <form id="loginForm" method="POST">
-                            <input type="text" placeholder="Enter Email" name="username" required>
-                            <input type="password" placeholder="Enter Password" name="pass" required>
-                            <button type="submit">Login</button>
-                        </form>
-                    </div>
-                    <div class="modal-form hide" id="signup-div">
-                        <form id="signup-form" method="POST">
-                            <input type="text" placeholder="Enter First Name" name="first-name" required>
-                            <input type="text" placeholder="Enter Last Name" name="last-name" required>
-                            <input type="text" placeholder="Email" name="email" required>
-                            <input type="password" placeholder="Password" name="pass" required>
-                            <button type="submit">Sign Up</button>
-                        </form>
-                    </div>
+                <div class="modal-tabs">
+                    <div class="tab" id="login-tab"><span>Login</span></div>
+                    <div class="tab tinted" id="signup-tab"><span>Sign Up</span></div>
+                </div>
+                <div class="modal-form" id="login-div">
+                    <form id="loginForm" method="POST">
+                        <input type="text" placeholder="Enter Email" name="username" required>
+                        <input type="password" placeholder="Enter Password" name="pass" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="modal-form hide" id="signup-div">
+                    <form id="signup-form" method="POST">
+                        <input type="text" placeholder="Enter First Name" name="first-name" required>
+                        <input type="text" placeholder="Enter Last Name" name="last-name" required>
+                        <input type="text" placeholder="Email" name="email" required>
+                        <input type="password" placeholder="Password" name="pass" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

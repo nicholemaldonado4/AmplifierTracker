@@ -33,16 +33,21 @@
             </form>
             <section class="add-modal">
                 <div class="add-modal-content">
-                    <form id="add-maintenance-form" method="POST">
-                        <div class="hide"><input class="full" type="text" name="barcode" value="<?=getHeading();?>"></div>
-                        <div><label for="date-added">Date Added</label></div>
-                        <div><input class="full" type="text" name="date-added"></div>
-                        <div><label for="prob">Problem</label></div>
-                        <div><input class="full" type="text" name="prob"></div>
-                        <div><label for="prob-descrip">Problem Description</label></div>
-                        <div><input class="full" type="text" name="prob-descrip"></div>
-                        <button type="submit" id="add-maintenance-btn">Add Record</button>
-                    </form>
+<!--
+                    <div class="inner-modal">
+                        <div id="close-box"><i class="fas fa-times"></i></div>
+-->
+                        <form id="add-maintenance-form" method="POST">
+                            <div class="hide"><input class="full" type="text" name="barcode" value="<?=getHeading();?>"></div>
+                            <div><label for="date-added">Date Added</label></div>
+                            <div><input class="full" type="text" name="date-added"></div>
+                            <div><label for="prob">Problem</label></div>
+                            <div><input class="full" type="text" name="prob"></div>
+                            <div><label for="prob-descrip">Problem Description</label></div>
+                            <div><input class="full" type="text" name="prob-descrip"></div>
+                            <button type="submit" id="add-maintenance-btn">Add Record</button>
+                        </form>
+<!--                    </div>-->
                 </div>
             </section>
             <footer>

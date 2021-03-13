@@ -42,26 +42,30 @@
             </form>
             <section class="add-modal">
                 <div class="add-modal-content">
-                    <form id="add-rec-form" method="POST">
-                        <div><label for="barcode">Barcode</label></div>
-                        <div><input class="full" type="text" name="barcode"></div>
-                        <div><label for="freq-start">Frequency Range</label></div>
-                        <div>
-                            <input class="half" type="text" name="freq-start" placeholder="Start">
-                            <input class="half" type="text" name="freq-end" placeholder="End">
-                        </div>
-                        <div><label for="model-num">Model Number</label></div>
-                        <div><input class="full" type="text" name="model-num"></div>
-                        <div><label for="manufacturer">Manufacturer</label></div>
-                        <div><input class="full" type="text" name="manufacturer"></div>
-                        <div><label for="sn">Serial Number</label></div>
-                        <div><input class="full" type="text" name="sn"></div>
-                        <div><label for="type">Type</label></div>
-                        <div><input class="full" type="text" name="type" value="<?=getEquipType()?>"></div>
-                        <div><label for="loc">Location</label></div>
-                        <div><input class="full" type="text" name="loc" value="<?=getLocation()?>"></div>
+                    <div class="inner-modal">
+                        <div id="close-box"><i class="fas fa-times"></i></div>
+                        <form id="add-rec-form" method="POST">
+                            <div class="align-end"><label for="barcode">Barcode</label></div>
+                            <div><input class="full" type="text" name="barcode"></div>
+                            <div class="align-end"><label for="freq-start">Frequency Range</label></div>
+                            <div>
+                                <input class="half" type="text" name="freq-start" placeholder="Start">
+                                <input class="half" type="text" name="freq-end" placeholder="End">
+                            </div>
+                            <div class="align-end"><label for="model-num">Model Number</label></div>
+                            <div><input class="full" type="text" name="model-num"></div>
+                            <div class="align-end"><label for="manufacturer">Manufacturer</label></div>
+                            <div><input class="full" type="text" name="manufacturer"></div>
+                            <div class="align-end"><label for="sn">Serial Number</label></div>
+                            <div><input class="full" type="text" name="sn"></div>
+                            <div class="align-end"><label for="type">Type</label></div>
+                            <div><input class="full" type="text" name="type" value="<?=getEquipType()?>"></div>
+                            <div class="align-end"><label for="loc">Location</label></div>
+                            <div><input class="full" type="text" name="loc" value="<?=getLocation()?>"></div>
+                            
+                        </form>
                         <button type="submit" id="add-rec-btn">Add Record</button>
-                    </form>
+                    </div>
                 </div>
             </section>
             <footer>

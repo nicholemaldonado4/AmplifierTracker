@@ -67,14 +67,11 @@ html {
     grid-template-columns: auto repeat(7, 1fr);
 }
 
-
-
-.loc-radio-btn, .radio-btn {
+.loc-radio-btn {
     opacity: 0;
     width: 0;
     position: fixed;
 }
-
 
 
 .add-modal {
@@ -90,15 +87,49 @@ html {
 }
 
 .add-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 10% auto; 
     padding: 20px;
     width: 80%; 
     font-size: 1.6rem;
+    background-color: #ebebeb;
+    border-radius: 10px;
 }
 
+#close-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    background-color: #ebebeb;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--clr-orange);
+}
 
+#close-box i {
+    color: #807d7d;
+    margin-right: 5px;
+}
 
+.inner-modal form {
+    padding: 20px 15px 0px 15px;
+}
+
+.inner-modal {
+    display: flex;
+    flex-direction: column;
+/*    margin: 5px;*/
+    background-color: white;
+}
+
+.inner-modal button {
+    background-image: linear-gradient(var(--clr-orange), var(--clr-med-orange));
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    margin: 20px 15px 15px 15px;
+    height: 3rem;
+    font-family: var(--ff-accent);
+}
 
 
 #add-rec-form {
@@ -114,7 +145,13 @@ html {
 }
 
 #add-rec-form label {
+    font-family: var(--ff-accent);
+    font-size: 1.4rem;
     white-space: nowrap;
+}
+
+.align-end {
+    text-align: end;
 }
 
 .left {
@@ -135,12 +172,11 @@ footer {
     justify-content: space-between;
 }
 
+
+
 @media all and (min-width: 680px) {
     .add-modal-content {
         width: 534px; 
-        border: solid;
-        border-color: green;
-
     }
 }
 
