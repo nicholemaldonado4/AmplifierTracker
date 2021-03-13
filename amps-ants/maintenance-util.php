@@ -9,12 +9,15 @@
             if ($result === "") {
                 $query = "SELECT * FROM MaintenanceLog WHERE Barcode=\"{$_SESSION["POST_equip_barcode"]}\"";
                 if ($result = $db->getCon()->query($query)) {
+                    $makeAccent = true;
                     while($row = $result->fetch_assoc()) {
-                        echo "<div ><input class=\"radio-btn\" id=\"{$row["LogId"]}\" type=\"radio\" name=\"log-id\" value=\"{$row["LogId"]}\"><div class=\"rect-selector {$row["LogId"]} selector-dim\"></div></div>";
-                        echo "<div class=\"grid-item {$row["LogId"]}\">{$row["Barcode"]}</div>";
-                        echo "<div class=\"grid-item {$row["LogId"]}\">{$row["DateAdded"]}</div>";
-                        echo "<div class=\"grid-item {$row["LogId"]}\">{$row["Problem"]}</div>";
-                        echo "<div class=\"grid-item {$row["LogId"]}\">{$row["ProbDescription"]}</div>";
+                        $rowColor = $makeAccent ? "accent-row" : "reg-row";
+                        echo "<div class=\"dot-container {$row["LogId"]} grid-item\"><input class=\"radio-btn\" id=\"log-{$row["LogId"]}\" type=\"radio\" name=\"log-id\" value=\"{$row["LogId"]}\"><div class=\"dot-selector {$row["LogId"]} selector-dim\"><div class=\"inner-dot\"></div></div></div>";
+                        echo "<div class=\"grid-item {$row["LogId"]} {$rowColor}\">{$row["Barcode"]}</div>";
+                        echo "<div class=\"grid-item {$row["LogId"]} {$rowColor}\">{$row["DateAdded"]}</div>";
+                        echo "<div class=\"grid-item {$row["LogId"]} {$rowColor}\">{$row["Problem"]}</div>";
+                        echo "<div class=\"grid-item {$row["LogId"]} {$rowColor}\">{$row["ProbDescription"]}</div>";
+                        $makeAccent = !$makeAccent;
                     }
                     mysqli_free_result($result);
                 }

@@ -12,12 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Staatliches|Patua+One" rel="stylesheet">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/amps-ants/maintenance.css">
+    <link rel="stylesheet" href="../css/amps-ants/table.css">
 </head>
 <body>
     <div class="page-container">
         <?php require_once '../header.php'; ?>
         <?php require_once 'maintenance-util.php'; ?>
-        <section>
+        <section class="title-sect">
             <h2>Maintenance Log: <?=getHeading();?></h2>
         </section>
             <div class="record-title-grid">
@@ -45,8 +46,14 @@
                 </div>
             </section>
             <footer>
-                <button type="submit" value="delete" form="record-form">Delete Record</button>
-                <button id="add-btn">Add Record</button>
+                <button name="delete" type="submit" value="Delete Record" form="record-form">
+                    <span class="btn-text">Delete Record</span>
+                    <span class="btn-img"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                </button>
+                <button id="add-btn">
+                    <span class="btn-text">Add Record</span>
+                    <span class="btn-img"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                </button>
             </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
