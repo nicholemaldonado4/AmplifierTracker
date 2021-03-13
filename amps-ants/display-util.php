@@ -40,7 +40,7 @@
                     $makeAccent = true;
                     while($row = $result->fetch_assoc()) {
                         $rowColor = $makeAccent ? "accent-row" : "reg-row";
-                        echo "<div class=\"dot-container {$row["Barcode"]}\"><input class=\"radio-btn\" id=\"rec-{$row["Barcode"]}\" type=\"radio\" name=\"record_selector\" value=\"{$row["Barcode"]}\"><div class=\"dot-selector {$row["Barcode"]} selector-dim\"><div class=\"inner-dot\"></div></div></div>";
+                        echo "<div class=\"dot-container {$row["Barcode"]} grid-item\"><input class=\"radio-btn\" id=\"rec-{$row["Barcode"]}\" type=\"radio\" name=\"record_selector\" value=\"{$row["Barcode"]}\"><div class=\"dot-selector {$row["Barcode"]} selector-dim\"><div class=\"inner-dot\"></div></div></div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["Barcode"]}</div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["StartFrequencyRange"]}</div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["ModelNumber"]}</div>";
