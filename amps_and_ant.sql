@@ -58,9 +58,9 @@ CREATE TABLE Users (
     UNIQUE KEY (Email)
 );
 
-INSERT INTO Location VALUES ("E1"), ("E2"), ("E5"), ("T3"), ("T5");
+INSERT INTO Location VALUES ("A1"), ("A2"), ("A5"), ("B3"), ("B5");
 INSERT INTO EquipType VALUES ("Amplifier"), ("Antenna");
 INSERT INTO MaintenanceCategories VALUES ("MCat1"), ("MCat2"), ("MCat3"), ("MCat4");
-INSERT INTO AmpsAndAnt (Barcode, Type, Location) VALUES ("Amp2", "Amplifier", "E2"), ("Amp3", "Amplifier", "E2"), ("Amp4", "Amplifier", "E5"), ("Amp5", "Amplifier", "E1"), ("Ant1", "Antenna", "E1"), ("Ant2", "Antenna", "E1");
+INSERT INTO AmpsAndAnt (Barcode, Type, Location) VALUES ("Amp2", "Amplifier", "A2"), ("Amp3", "Amplifier", "A2"), ("Amp4", "Amplifier", "B5"), ("Amp5", "Amplifier", "A1"), ("Ant1", "Antenna", "A1"), ("Ant2", "Antenna", "A1");
 INSERT INTO MaintenanceLog (Barcode, ProbDescription, DateAdded, Problem) VALUES ("Amp3", "There was a problem.", "2021-02-06", "MCat3"), ("Amp3", "ok", "2020-02-07", "MCat1"), ("Amp4", "(.?)There(.?)", "2021-02-08", "MCat2");
 INSERT INTO Users (FirstName, LastName, Email, `Password`) VALUES ("Nichole", "Maldonado", "blah@gmail.com", "bananaRama");
