@@ -52,13 +52,19 @@ html {
     padding: 20px;
     width: 80%; 
     font-size: 1.6rem;
+    background-color: #ebebeb;
+    border-radius: 10px;
 }
 
-#add-rec-form {
+#add-maintenance-form {
     display: grid;
     grid-template-columns: 1fr 4fr;
     row-gap: 10px;
     column-gap: 20px;
+}
+
+.add-modal-content input[name=prob-descrip] {
+    height: 100px;
 }
 
 .add-modal-content input[type=text] {
@@ -68,6 +74,47 @@ html {
 #add-rec-form label {
     white-space: nowrap;
 }
+
+.inner-modal {
+    display: flex;
+    flex-direction: column;
+/*    margin: 5px;*/
+    background-color: white;
+}
+
+.inner-modal form {
+    padding: 20px 15px 0px 15px;
+}
+
+.inner-modal button {
+    background-image: linear-gradient(var(--clr-orange), var(--clr-med-orange));
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    margin: 20px 15px 15px 15px;
+    height: 3rem;
+    font-family: var(--ff-accent);
+}
+
+#close-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    background-color: #ebebeb;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--clr-orange);
+}
+
+#close-box i {
+    color: #807d7d;
+    margin-right: 5px;
+}
+
+.align-end {
+    text-align: end;
+}
+
 
 .left {
     text-align: right;
@@ -88,9 +135,7 @@ footer {
 
 @media all and (min-width: 680px) {
     .add-modal-content {
-        width: 534px; 
-        border: solid;
-        border-color: green;
+        width: 534px;
 
     }
 }

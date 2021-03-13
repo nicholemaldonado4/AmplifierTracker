@@ -64,7 +64,7 @@
                             <div><input class="full" type="text" name="loc" value="<?=getLocation()?>"></div>
                             
                         </form>
-                        <button type="submit" id="add-rec-btn">Add Record</button>
+                        <button type="submit" id="add-rec-btn" form="add-rec-form">Add Record</button>
                     </div>
                 </div>
             </section>

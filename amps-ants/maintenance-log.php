@@ -33,21 +33,19 @@
             </form>
             <section class="add-modal">
                 <div class="add-modal-content">
-<!--
                     <div class="inner-modal">
                         <div id="close-box"><i class="fas fa-times"></i></div>
--->
                         <form id="add-maintenance-form" method="POST">
                             <div class="hide"><input class="full" type="text" name="barcode" value="<?=getHeading();?>"></div>
-                            <div><label for="date-added">Date Added</label></div>
-                            <div><input class="full" type="text" name="date-added"></div>
-                            <div><label for="prob">Problem</label></div>
+                            <div class="align-end"><label for="date-added">Date Added</label></div>
+                            <div><input class="full" type="date" name="date-added" placeholder="mm/dd/yyyy"></div>
+                            <div class="align-end"><label for="prob">Problem</label></div>
                             <div><input class="full" type="text" name="prob"></div>
-                            <div><label for="prob-descrip">Problem Description</label></div>
+                            <div class="align-end"><label for="prob-descrip">Problem Description</label></div>
                             <div><input class="full" type="text" name="prob-descrip"></div>
-                            <button type="submit" id="add-maintenance-btn">Add Record</button>
                         </form>
-<!--                    </div>-->
+                        <button type="submit" id="add-maintenance-btn" form="add-maintenance-form">Add Record</button>
+                    </div>
                 </div>
             </section>
             <footer>
@@ -62,7 +60,7 @@
             </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/header.js"></script>
     <script src="../js/amps-ants/maintenance.js"></script>
 </body>
 </html>

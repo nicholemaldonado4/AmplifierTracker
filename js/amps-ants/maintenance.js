@@ -1,5 +1,6 @@
 const addBtn = document.getElementById("add-btn");
 const addModal = document.querySelector(".add-modal");
+const closeBox = document.getElementById("close-box");
 
 function clickRadioBtn() {
     if (this.classList.length > 1) {
@@ -11,7 +12,12 @@ function showAddRecordModal() {
     addModal.style.display = "block";
 }
 
+function closeAddModal() {
+    addModal.style.display = "none";
+}
+
 addBtn.addEventListener("click", showAddRecordModal, false);
+closeBox.addEventListener("click", closeAddModal, false);
 
 $(document).ready(function() {
     $(".grid-item").click(clickRadioBtn);
