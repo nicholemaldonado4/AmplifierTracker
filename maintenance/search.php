@@ -9,8 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amplifier Tracker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans|Staatliches|Patua+One" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/maintenance/search.css">
+    <link rel="stylesheet" href="../css/amps-ants/table.css">
 </head>
 <body>
     <div class="page-container">
@@ -18,7 +20,7 @@
             require_once '../header.php'; 
             require_once 'search-util.php';
         ?>
-        <section>
+        <section class="title-sect">
             <h2>Maintenance Search</h2>
         </section>
             <div class="record-title-grid">
@@ -34,20 +36,41 @@
             </div>
     
             <footer>
-                <form method="POST" action="search-handler.php">
-                    <label for="prob">Problem</label>
-                    <input type="text" name="prob">
-                    <label for="prob-descrip">Problem Description</label>
-                    <input type="text" name="prob-descrip">
-                    <input type="submit" name="search-btn" value="Search">
-                    <input type="submit" name="reset-btn" value="Reset">
-                    <button>Export</button>
-                </form>
+                <div class="footer-part left">
+                    <form method="POST" action="search-handler.php" id="search-form">
+<!--                        <div class="together">-->
+                        <div class="left-align"><label for="prob">Problem</label></div>
+                        <div><input type="text" name="prob" class="space-divider"></div>
+<!--                        </div>-->
+<!--                        <div class="together">-->
+                        <div class="left-align"><label for="prob-descrip">Problem Description</label></div>
+                        <div><input type="text" name="prob-descrip"></div>
+<!--                        </div>-->
+<!--                        <input type="submit" name="search-btn" value="Search">-->
+<!--                        <input type="submit" name="reset-btn" value="Reset">-->
+<!--                        <button>Export</button>-->
+                    </form>
+                </div>
+                <div class="footer-part right">
+                    <button  name="search-btn" type="submit" value="Search" form="search-form">
+                        <span class="btn-text">Search</span>
+                        <span class="btn-img"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </button>
+                    <button name="reset-btn" type="submit" value="Reset" form="search-form">
+                        <span class="btn-text">Reset</span>
+                        <span class="btn-img"><i class="fas fa-backspace" aria-hidden="true"></i></span>
+                    </button>
+                    <button name="export-btn" type="submit" value="Export" form="search-form">
+                        <span class="btn-text">Export</span>
+                        <span class="btn-img"><i class="far fa-file-excel" aria-hidden="true"></i></span>
+                    </button>
+                </div>
+                
             </footer>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/header.js"></script>
     <script src="search.js"></script>
 </body>
 </html>

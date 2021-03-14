@@ -20,13 +20,16 @@
                     $query = $query." WHERE ".$_SESSION["POST_search"];
                 }
                 if ($result = $db->getCon()->query($query)) {
+                    $makeAccent = true;
                     while($row = $result->fetch_assoc()) {
-                        echo "<div class=\"grid-item\">{$row["Barcode"]}</div>";
-                        echo "<div class=\"grid-item\">{$row["SerialNumber"]}</div>";
-                        echo "<div class=\"grid-item\">{$row["Problem"]}</div>";
-                        echo "<div class=\"grid-item\">{$row["ProbDescription"]}</div>";
-                        echo "<div class=\"grid-item\">{$row["DateAdded"]}</div>";
-                        echo "<div class=\"grid-item\">{$row["Location"]}</div>";
+                        $rowColor = $makeAccent ? "accent-row" : "reg-row";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["Barcode"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["SerialNumber"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["Problem"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["ProbDescription"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["DateAdded"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor}\">{$row["Location"]}</div>";
+                        $makeAccent = !$makeAccent;
                     }
                     mysqli_free_result($result);
                 }
