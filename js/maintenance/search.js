@@ -19,7 +19,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "../php/excel-exporter.php",
+            url: "maintenance-export.php",
             data: $(this).serialize(),
             success: function(data) {
                 if (data) {

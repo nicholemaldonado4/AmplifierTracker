@@ -34,7 +34,7 @@
             <div class="record-grid-container">
                 <?php getAllMaintenance(); ?>
             </div>
-            <div class="hidden"><form method="POST" class="hidden" action="../php/excel-exporter.php" id="excel-form"></form></div>
+            <div class="hidden"><form method="POST" class="hidden" action="maintenance-export.php" id="excel-form"></form></div>
     
             <footer>
                 <div class="footer-part left">

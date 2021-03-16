@@ -1,6 +1,6 @@
 <?php
 require_once dirname(__DIR__)."/database-connector.php";
-session_start();
+
 class ExcelExporter {
     function export($query, $header) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,12 +29,4 @@ class ExcelExporter {
         }
     }
 }
-    $exporter = new ExcelExporter();
-    $query = "SELECT MaintenanceLog.Barcode, ProbDescription, DateAdded, Problem FROM MaintenanceLog LEFT JOIN AmpsAndAnt ON MaintenanceLog.Barcode = AmpsAndAnt.Barcode";
-    if (isset($_SESSION["POST_search"])) {
-        $query = $query." WHERE ".$_SESSION["POST_search"];
-    }
-    $exporter->export($query, array("Barcode", "Problem Description", "Date Added", "Problem"));
-
-
 ?>
