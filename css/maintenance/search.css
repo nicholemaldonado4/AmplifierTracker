@@ -39,10 +39,7 @@ h3 {
 
 footer {
     display: flex;
-    flex-direction: column;
-/*    flex-wrap: nowrap;*/
-    
-    
+    flex-direction: column;    
 }
 
 footer label {
@@ -57,11 +54,7 @@ footer input[type="text"] {
     border-style: none;
     font-size: 1.4rem;
     width: 100%;
-}
-
-.together {
-    display: inline-flex;
-    flex: nowrap;
+    height: 1.8rem;
 }
 
 .left form {
@@ -70,24 +63,13 @@ footer input[type="text"] {
     grid-template-columns: auto 1fr;
     margin: 0px 10px;
     margin-top: 5px;
-    row-gap: 5px;
+    row-gap: 7px;
 }
 
 .right {
     display: flex;
     justify-content: space-evenly;
 }
-
-/*
-@media all and (max-width: 840px) {
- .together {
-        display: inline-flex;
-        flex: nowrap;
-        border-style: solid;
-        border-color: pink;
-    }
-}
-*/
 
 @media all and (min-width: 555px) {
     footer {
@@ -150,8 +132,6 @@ footer input[type="text"] {
         align-items: center;
         flex: 1;
         flex-direction: row;
-        border-style: solid;
-        border-color: green;
     }
     footer {
         display: flex;
@@ -159,27 +139,5 @@ footer input[type="text"] {
         justify-content: space-between;
         grid-template-columns: none;
     }
-    
-    .together {
-        display: inline-flex;
-        flex: nowrap;
-        border-style: solid;
-        border-color: blue;
-    }
-
-/*
-    .footer-part {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: flex-end;
-        border-style: solid;
-        border-color: green;
-    }
-    
-    footer {
-        justify-content: space-between;
-    }
-*/
 }
 

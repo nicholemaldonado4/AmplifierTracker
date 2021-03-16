@@ -34,21 +34,15 @@
             <div class="record-grid-container">
                 <?php getAllMaintenance(); ?>
             </div>
+            <div class="hidden"><form method="POST" class="hidden" action="../php/excel-exporter.php" id="excel-form"></form></div>
     
             <footer>
                 <div class="footer-part left">
                     <form method="POST" action="search-handler.php" id="search-form">
-<!--                        <div class="together">-->
                         <div class="left-align"><label for="prob">Problem</label></div>
                         <div><input type="text" name="prob" class="space-divider"></div>
-<!--                        </div>-->
-<!--                        <div class="together">-->
                         <div class="left-align"><label for="prob-descrip">Problem Description</label></div>
                         <div><input type="text" name="prob-descrip"></div>
-<!--                        </div>-->
-<!--                        <input type="submit" name="search-btn" value="Search">-->
-<!--                        <input type="submit" name="reset-btn" value="Reset">-->
-<!--                        <button>Export</button>-->
                     </form>
                 </div>
                 <div class="footer-part right">
@@ -60,7 +54,7 @@
                         <span class="btn-text">Reset</span>
                         <span class="btn-img"><i class="fas fa-backspace" aria-hidden="true"></i></span>
                     </button>
-                    <button name="export-btn" type="submit" value="Export" form="search-form">
+                    <button name="export-btn" type="submit" value="Export" form="excel-form">
                         <span class="btn-text">Export</span>
                         <span class="btn-img"><i class="far fa-file-excel" aria-hidden="true"></i></span>
                     </button>
