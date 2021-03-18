@@ -67,6 +67,24 @@ $(document).ready(function() {
         });
     });
     
+    $("#export-form").submit(function(e) {
+        // Prevent event action of going to same page.
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "display-export.php",
+            data: $(this).serialize(),
+            success: function(data) {
+                if (data) {
+                   alert(data);
+                }
+                else {
+                    window.location.replace("display.php");
+                }
+            }
+        });
+    });
+    
 //    $("#maintenance-btn").click(function(e) {
 //        // Prevent event action of going to same page.
 //        e.preventDefault();

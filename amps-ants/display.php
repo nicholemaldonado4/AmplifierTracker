@@ -40,6 +40,9 @@
                     <?php getAmpsOrAnt(); ?>
 <!--                </form>-->
             </form>
+            <section class="hidden">
+                <form method="POST" action="display-export.php" id="excel-form"></form>
+            </section>
             <section class="add-modal">
                 <div class="add-modal-content">
                     <div class="inner-modal">
@@ -70,7 +73,7 @@
             </section>
             <footer>
                 <div class="footer-part left">
-                    <button>
+                    <button type="submit" form="excel-form">
                         <span class="btn-text">Export to Excel</span>
                         <span class="btn-img"><i class="fa fa-table" aria-hidden="true"></i></span>
                     </button>
