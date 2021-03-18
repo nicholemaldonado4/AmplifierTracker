@@ -207,6 +207,14 @@ footer button, footer input[type="submit"] {
     text-align: end;
 }
 
+.inner-modal .user-error {
+    margin: 0px 15px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-family: var(--ff-accent);
+    color: red;
+}
+
 @media all and (min-width: 680px) {
    
 }

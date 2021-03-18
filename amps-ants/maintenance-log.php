@@ -44,6 +44,7 @@
                             <div class="align-end"><label for="prob-descrip">Problem Description</label></div>
                             <div><input class="full" type="text" name="prob-descrip"></div>
                         </form>
+                        <p class="user-error"></p>
                         <button type="submit" id="add-maintenance-btn" form="add-maintenance-form">Add Record</button>
                     </div>
                 </div>

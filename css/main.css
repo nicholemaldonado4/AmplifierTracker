@@ -150,7 +150,7 @@ html {
 }
 
 
-.modal-form p {
+.modal-form .user-error {
     margin: 5px 15px;
     font-size: 1.4rem;
     font-family: var(--ff-accent);

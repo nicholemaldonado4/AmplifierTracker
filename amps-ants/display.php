@@ -65,8 +65,8 @@
                             <div><input class="full" type="text" name="type" value="<?=getEquipType()?>"></div>
                             <div class="align-end"><label for="loc">Location</label></div>
                             <div><input class="full" type="text" name="loc" value="<?=getLocation()?>"></div>
-                            
                         </form>
+                        <p class="user-error"></p>
                         <button type="submit" id="add-rec-btn" form="add-rec-form">Add Record</button>
                     </div>
                 </div>
