@@ -8,6 +8,7 @@ const loginTab = document.getElementById("login-tab");
 const signUpDiv = document.getElementById("signup-div");
 const loginDiv = document.getElementById("login-div");
 const closeBox = document.getElementById("close-box");
+const userErrors = document.querySelectorAll(".user-error");
 
 
 //function showToggleMenu() {
@@ -42,6 +43,9 @@ function showLoginModal() {
 
 function closeLoginModal() {
     modal.style.display = "none";
+    for (let msg of userErrors) {
+      msg.innerHTML = "";
+    }
 }
 
 function hideLoginModal() {
@@ -104,10 +108,9 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(data) {
                 if (data) {
-                   alert(data);
+                    userErrors[0].innerHTML = data;
                 }
                 else {
-//                    hideLoginModal();
                     window.location.replace("index.php");
                 }
             }
@@ -124,10 +127,9 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(data) {
                 if (data) {
-                   alert(data);
+                   userErrors[1].innerHTML = data;
                 }
                 else {
-//                    hideLoginModal();
                     window.location.replace("index.php");
                 }
             }

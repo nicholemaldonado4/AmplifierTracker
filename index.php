@@ -36,6 +36,7 @@
                     <form id="loginForm" method="POST">
                         <input type="text" placeholder="Enter Email" name="username" required>
                         <input type="password" placeholder="Enter Password" name="pass" required>
+                        <p class="user-error"></p>
                         <button type="submit">Login</button>
                     </form>
                 </div>
@@ -45,6 +46,7 @@
                         <input type="text" placeholder="Enter Last Name" name="last-name" required>
                         <input type="text" placeholder="Email" name="email" required>
                         <input type="password" placeholder="Password" name="pass" required>
+                        <p class="user-error"></p>
                         <button type="submit">Sign Up</button>
                     </form>
                 </div>

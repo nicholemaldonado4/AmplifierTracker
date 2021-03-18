@@ -149,6 +149,14 @@ html {
     padding-bottom: 15px;
 }
 
+
+.modal-form p {
+    margin: 5px 15px;
+    font-size: 1.4rem;
+    font-family: var(--ff-accent);
+    color: red;
+}
+
 .modal-form input,
 .modal-form button {
     margin: 7px 15px;
