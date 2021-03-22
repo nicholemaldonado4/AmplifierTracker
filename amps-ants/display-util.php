@@ -51,6 +51,10 @@
 //        }
 //        return $query;
 //    }
+
+    function hideSN() {
+        return (!isset($_SESSION["POST_type"]) || (isset($_SESSION["POST_type"]) && $_SESSION["POST_type"] === "")) ? " hide-mobile" : "";
+    }
     
 // TODO: determine what to do if we can't connect ($result != "") and when can't query
     function getAmpsOrAnt() {
@@ -61,16 +65,20 @@
                 $query = getQuery();
                 $typeSet = isset($_SESSION["POST_type"]);
                 $hideType = (!$typeSet || ($typeSet && $_SESSION["POST_type"] === "")) ? "" : " hide";
+                $hideSN = "";
+                if ($hideType === "") {
+                    $hideSN = " hide-mobile";
+                }
                 if ($result = $db->getCon()->query($query)) {
                     $makeAccent = true;
                     while($row = $result->fetch_assoc()) {
                         $rowColor = $makeAccent ? "accent-row" : "reg-row";
                         echo "<div class=\"dot-container {$row["Barcode"]} grid-item\"><input class=\"radio-btn\" id=\"rec-{$row["Barcode"]}\" type=\"radio\" name=\"record_selector\" value=\"{$row["Barcode"]}\"><div class=\"dot-selector {$row["Barcode"]} selector-dim\"><div class=\"inner-dot\"></div></div></div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["Barcode"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["StartFrequencyRange"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor} hide-mobile\">{$row["StartFrequencyRange"]}</div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["ModelNumber"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["Manufacturer"]}</div>";
-                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}\">{$row["SerialNumber"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor} hide-mobile\">{$row["Manufacturer"]}</div>";
+                        echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}{$hideSN}\">{$row["SerialNumber"]}</div>";
                         echo "<div class=\"grid-item {$row["Barcode"]} {$rowColor}{$hideType}\">{$row["Type"]}</div>";
                         echo "<div class=\"loc-radio-btn {$rowColor}\"><input id=\"loc-{$row["Barcode"]}\" type=\"radio\" name=\"equip-type\" value=\"{$row["Type"]}\"></div>";
                         $makeAccent = !$makeAccent;

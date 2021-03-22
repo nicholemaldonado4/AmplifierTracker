@@ -28,10 +28,10 @@
             <div class="record-title-grid<?=showType();?>">
                     <div class="grid-item selector-dim"></div>
                     <div class="grid-item"><h3>Barcode</h3></div>
-                    <div class="grid-item"><h3>Frequency Range</h3></div>
+                    <div class="grid-item hide-mobile"><h3>Frequency Range</h3></div>
                     <div class="grid-item"><h3>Model Number</h3></div>
-                    <div class="grid-item"><h3>Manufacturer</h3></div>
-                    <div class="grid-item"><h3>Serial Number</h3></div>
+                    <div class="grid-item hide-mobile"><h3>Manufacturer</h3></div>
+                    <div class="grid-item<?=hideSN(); ?>"><h3>Serial Number</h3></div>
                     <?=addTypeCol(); ?>
             </div>
             <form class="record-grid-container<?=showType();?>" id="record-form" method="POST" action="delete-record.php">
