@@ -24,11 +24,11 @@
                     while($row = $result->fetch_assoc()) {
                         $rowColor = $makeAccent ? "accent-row" : "reg-row";
                         echo "<div class=\"grid-item {$rowColor}\">{$row["Barcode"]}</div>";
-                        echo "<div class=\"grid-item {$rowColor}\">{$row["SerialNumber"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor} hide-mobile\">{$row["SerialNumber"]}</div>";
                         echo "<div class=\"grid-item {$rowColor}\">{$row["Problem"]}</div>";
                         echo "<div class=\"grid-item {$rowColor}\">{$row["ProbDescription"]}</div>";
-                        echo "<div class=\"grid-item {$rowColor}\">{$row["DateAdded"]}</div>";
-                        echo "<div class=\"grid-item {$rowColor}\">{$row["Location"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor} hide-mobile\">{$row["DateAdded"]}</div>";
+                        echo "<div class=\"grid-item {$rowColor} hide-mobile\">{$row["Location"]}</div>";
                         $makeAccent = !$makeAccent;
                     }
                     mysqli_free_result($result);

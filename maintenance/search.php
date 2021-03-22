@@ -25,11 +25,11 @@
         </section>
             <div class="record-title-grid">
                     <div class="grid-item"><h3>Barcode</h3></div>
-                    <div class="grid-item"><h3>Serial Number</h3></div>
+                    <div class="grid-item hide-mobile"><h3>Serial Number</h3></div>
                     <div class="grid-item"><h3>Problem</h3></div>
                     <div class="grid-item"><h3>Problem Description</h3></div>
-                    <div class="grid-item"><h3>Date Added</h3></div>
-                    <div class="grid-item"><h3>Location</h3></div>
+                    <div class="grid-item hide-mobile"><h3>Date Added</h3></div>
+                    <div class="grid-item hide-mobile trial"><h3>Location</h3></div>
             </div>
             <div class="record-grid-container">
                 <?php getAllMaintenance(); ?>
