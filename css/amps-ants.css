@@ -52,21 +52,13 @@ html {
     box-sizing: border-box;
 }
 
-/*
-
-.custom-select {
-    position: relative;
+.search-split {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
 }
-
-
-.custom-select select {
-    display: none;
-}
-
-.select-selected {
-    background-color: DodgerBlue;
-}
-*/
 
 @media all and (min-width: 900px) {
  

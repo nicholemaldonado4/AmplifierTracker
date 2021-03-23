@@ -20,3 +20,25 @@
 ////        });
 //    });
 //});
+
+const searchBar = document.getElementById("search-bar");
+
+function search() {
+//    alert(searchBar.value.toLowerCase());
+    let searchInput = searchBar.value.toLowerCase();
+    let locations = document.querySelector(".loc-list").getElementsByTagName("li");
+    for (let i = 0; i < locations.length; i++) {
+        let inputLoc = locations[i].getElementsByTagName("input")[0];
+        let containsSearch = inputLoc.value.toLowerCase().indexOf(searchInput);
+        if (containsSearch > -1) {
+            locations[i].style.display = "";
+        }
+        else {
+            locations[i].style.display = "none"; 
+            inputLoc.checked = false;
+        }
+        
+    }
+}
+
+searchBar.addEventListener("keyup", search, false);

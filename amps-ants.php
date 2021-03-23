@@ -21,18 +21,23 @@
         require_once 'header.php';
         require_once 'site-finder.php'
     ?>
-    <form id="loc-form" action="amps-ants/display.php" method="POST">
-        <input list="loc-drop" name="loc">
-      
-            <datalist id="loc-drop">
-<!--                <option value="" selected hidden disabled>Select a Location</option>-->
-                <?php getSites(); ?>
-            </datalist>
-   
-        <button type="submit" name="type" value="Amplifier">Amplifiers</button>
-        <button type="submit" name="type" value="Antenna">Antennas</button>
-        <button type="submit" name="type" value="">All</button>
-    </form>
+    <section class="search-split">
+        <div class="top">
+            <div>
+                <input placeholder="Search for a location" id="search-bar" type="text">
+            </div>
+            <form id="loc-form" action="amps-ants/display.php" method="POST">
+                <ul class="loc-list">
+                    <?php getSites(); ?>
+                </ul>
+            </form>
+        </div>
+        <div class="bottom">
+            <button type="submit" name="type" value="Amplifier" form="loc-form">Amplifiers</button>
+            <button type="submit" name="type" value="Antenna" form="loc-form">Antennas</button>
+            <button type="submit" name="type" value="" form="loc-form">All</button>
+        </div>
+    </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/header.js"></script>
 <script src="js/amps-ants-script.js"></script>
