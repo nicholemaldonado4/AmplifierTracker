@@ -17,26 +17,32 @@
     <link rel="stylesheet" href="../css/amps-ants.css">
 </head>
 <body>
+    <section class="page-container">
     <?php 
         require_once 'header.php';
         require_once 'site-finder.php'
     ?>
-    <section class="search-split">
-        <div class="top">
-            <div>
+        <section class="title-sect">
+            <h2>Select a location:</h2>
+        </section>
+        <div>
+            <div class="search-container">
+                <i class="search-pad fa fa-search fa-3x" aria-hidden="true"></i>
                 <input placeholder="Search for a location" id="search-bar" type="text">
             </div>
+        </div>
+        <div class="search-form">
             <form id="loc-form" action="amps-ants/display.php" method="POST">
                 <ul class="loc-list">
                     <?php getSites(); ?>
                 </ul>
             </form>
         </div>
-        <div class="bottom">
+        <footer>
             <button type="submit" name="type" value="Amplifier" form="loc-form">Amplifiers</button>
             <button type="submit" name="type" value="Antenna" form="loc-form">Antennas</button>
             <button type="submit" name="type" value="" form="loc-form">All</button>
-        </div>
+        </footer>
     </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/header.js"></script>

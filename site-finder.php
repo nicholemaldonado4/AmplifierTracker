@@ -7,7 +7,7 @@
         if ($result === "") {
             if ($result = $db->getCon()->query("SELECT Location FROM Location")) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<li><input type=\"radio\" value=\"{$row["Location"]}\">{$row["Location"]}</li>";
+                    echo "<li class=\"search-item {$row["Location"]}\"><input id=\"rec-{$row["Location"]}\" name=\"loc\" type=\"radio\" value=\"{$row["Location"]}\">{$row["Location"]}</li>";
                 }
                 mysqli_free_result($result);
             }

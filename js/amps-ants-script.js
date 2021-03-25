@@ -22,6 +22,7 @@
 //});
 
 const searchBar = document.getElementById("search-bar");
+const searchForm = document.getElementsByClassName("search-form")[0];
 
 function search() {
 //    alert(searchBar.value.toLowerCase());
@@ -41,4 +42,23 @@ function search() {
     }
 }
 
+function clickRadioBtn() {
+//    alert(this.classList);
+    if (this.classList.length > 1) {
+            let active = searchForm.getElementsByClassName("clicked-loc")[0];
+            if (active != null && active != this) {
+                active.classList.remove("clicked-loc");
+            }
+        
+            document.getElementById("rec-" + this.classList.item(1)).click();
+            this.classList.add("clicked-loc");
+//            $("#rec-" + this.classList.item(1)).click();
+//            $("#loc-" + this.classList.item(1)).click();
+        }
+}
+
 searchBar.addEventListener("keyup", search, false);
+
+$(document).ready(function() {
+    $(".search-item").click(clickRadioBtn);   
+});
