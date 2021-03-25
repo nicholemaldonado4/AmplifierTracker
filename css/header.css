@@ -200,6 +200,10 @@ nav {
 
     }
     
+    .nav_bar_list .hide {
+        display: none;
+    }
+    
     .logo-holder {
         display: block;
     }
