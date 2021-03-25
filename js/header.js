@@ -150,7 +150,6 @@ $(document).ready(function() {
 //    });
     
     $("#logOutBtn").click(function(e) {
-        alert("button clicked");
         // Prevent event action of going to same page.
         e.preventDefault();
         // Perform ajax/async http request.
@@ -159,8 +158,6 @@ $(document).ready(function() {
             url: "../logout.php",
             data: $(this).serialize(),
             success: function(data) {
-//                alert(data);
-//                setToLoggedOut();
                 window.location.replace("/");
             }
         });
