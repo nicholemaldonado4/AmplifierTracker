@@ -29,34 +29,10 @@
         return sprintf($query, $col);
     }
 
-//    function getQuery() {
-//        $query = "SELECT * FROM AmpsAndAnt";
-//        if (isset($_SESSION)) {
-//            $typeSet = isset($_SESSION["POST_type"]);
-//            $locSet = isset($_SESSION["POST_loc"]);
-//            if ($typeSet || $locSet) {
-//                $query = $query." WHERE";
-//            }
-//            if ($locSet) {
-//                $query = $query." Location='{$_SESSION["POST_loc"]}'";
-////                        unset($_SESSION["POST_loc"]);
-//            }
-//            if ($typeSet) {
-//                if ($_SESSION["POST_type"] !== "") {
-//                    $query = $query.($locSet ? " AND " : " ")."Type='{$_SESSION["POST_type"]}'";
-//                }
-////                        unset($_SESSION["POST_type"]);
-//            }
-//
-//        }
-//        return $query;
-//    }
-
     function hideSN() {
         return (!isset($_SESSION["POST_type"]) || (isset($_SESSION["POST_type"]) && $_SESSION["POST_type"] === "")) ? " hide-mobile" : "";
     }
-    
-// TODO: determine what to do if we can't connect ($result != "") and when can't query
+
     function getAmpsOrAnt() {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $db = new DatabaseConnector();
@@ -94,7 +70,6 @@
         return ($_SESSION["POST_type"] !== "" ? $_SESSION["POST_type"]."s" : "Amplifiers and Antennas").": ".$_SESSION["POST_loc"];
     }
     
-// If type set, 
     function showType() {
         return $_SESSION["POST_type"] !== "" ? "" : " extra-grid";
     }
@@ -108,9 +83,6 @@
     }
 
     function addTypeCol() {
-//        if (!isset($_SESSION["POST_type"]) || (isset($_SESSION["POST_type"]) && $_SESSION["POST_type"] === "")) {
-//            echo "<div class=\"grid-item\"><h3>Type</h3></div>";
-//        }
         return $_SESSION["POST_type"] === "" ? "<div class=\"grid-item\"><h3>Type</h3></div>" : "";
     }
 

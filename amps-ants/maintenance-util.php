@@ -1,7 +1,6 @@
 <?php
     require_once dirname(__DIR__)."/database-connector.php";
-    
-// TODO: determine what to do if we can't connect ($result != "") and when can't query
+
     function getMaintenanceLog() {
         if (isset($_SESSION["POST_equip_barcode"])) {
             $db = new DatabaseConnector();

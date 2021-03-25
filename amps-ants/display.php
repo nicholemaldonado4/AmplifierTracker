@@ -20,11 +20,9 @@
     <div class="page-container">
                 
         <?php require_once '../header.php'; ?>
-<!--        <form method="POST" id="record-form">-->
         <section class="title-sect">
             <h2><?=getHeading();?></h2>
         </section>
-<!--        <section class="content-wrapper">-->
             <div class="record-title-grid<?=showType();?>">
                     <div class="grid-item selector-dim"></div>
                     <div class="grid-item"><h3>Barcode</h3></div>
@@ -34,11 +32,8 @@
                     <div class="grid-item<?=hideSN(); ?>"><h3>Serial Number</h3></div>
                     <?=addTypeCol(); ?>
             </div>
-            <form class="record-grid-container<?=showType();?>" id="record-form" method="POST" action="delete-record.php">
-<!--                <form method="POST" id="record-form">-->
-                    
+            <form class="record-grid-container<?=showType();?>" id="record-form" method="POST" action="delete-record.php">         
                     <?php getAmpsOrAnt(); ?>
-<!--                </form>-->
             </form>
             <section class="hidden">
                 <form method="POST" action="display-export.php" id="excel-form"></form>

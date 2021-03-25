@@ -1,7 +1,6 @@
 <?php
     require_once dirname(__DIR__)."/database-connector.php";
     
-
     function deleteRecord() {
         $db = new DatabaseConnector();
         $result = $db->connect();
@@ -13,7 +12,5 @@
         }
     }
         
-
-    
     deleteRecord();
 ?>
