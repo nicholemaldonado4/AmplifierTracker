@@ -1,34 +1,8 @@
-:root {
-
-}
-
-/*
-html {
-    font-size: 62.5%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-*/
-
 footer button {
     margin: 10px;
     padding: 10px 24px;
     font-size: 1.5rem;
 }
-
-/*
-.record-title-grid {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.record-grid-container {
-    grid-template-columns: repeat(6, 1fr);
-}
-*/
 
 .record-title-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -165,4 +139,3 @@ footer input[type="text"] {
         grid-template-columns: none;
     }
 }
-

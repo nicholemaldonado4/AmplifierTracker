@@ -18,14 +18,8 @@
 </head>
 <body>
     <?php require_once 'header.php';?>
-<!--
-    <section>
-        <img src="imgs/radar-dish.jpeg" alt="Satellite">
-    </section>
--->
     <section class="modal">
         <div class="modal-content">
-            
             <div class="inner-modal">
                 <div id="close-box"><i class="fas fa-times"></i></div>
                 <div class="modal-tabs">
@@ -53,7 +47,6 @@
             </div>
         </div>
     </section>
-<!--$servername = "127.0.0.1";-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/main.js"></script>
     <script src="js/header.js"></script>

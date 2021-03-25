@@ -23,11 +23,9 @@ closeBox.addEventListener("click", closeAddModal, false);
 
 $(document).ready(function() {
     $(".grid-item").click(clickRadioBtn);
-    
     $(".dot-container").click(clickRadioBtn);
     
      $("#record-form").submit(function(e) {
-        // Prevent event action of going to same page.
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -45,7 +43,6 @@ $(document).ready(function() {
     });
     
     $("#add-maintenance-form").submit(function(e) {
-        // Prevent event action of going to same page.
         e.preventDefault();
         $.ajax({
             type: "POST",

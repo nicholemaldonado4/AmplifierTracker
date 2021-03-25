@@ -136,18 +136,8 @@ footer button {
 
 footer button, footer input[type="submit"] {
     background-image: linear-gradient(#ededed, #c9c9c9);
-/*        background-color: #e3e3e3;*/
-/*        height: 40px;*/
-        border: none;
-/*
-        font-style: var(--ff-primary);
-        font-size: 1.4rem;
-*/
-/*        padding: 1rem;*/
-        border-radius: 5px;
-/*        display: block;*/
-        
-
+    border: none;
+    border-radius: 5px;
  }
 
 .radio-btn {
@@ -236,9 +226,6 @@ footer button, footer input[type="submit"] {
         font-size: 1.4rem;
         padding: 1rem;
         border-radius: 5px;
-/*        display: block;*/
-        
-
     }
 }
 

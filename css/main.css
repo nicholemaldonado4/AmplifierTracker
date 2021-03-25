@@ -1,35 +1,4 @@
 :root {
-/*
-    --clr-primary-200: #F3EED9;
-    --clr-primary-400: #824936;
-    --clr-neutral-100: #FFF;
-    --clr-neutral-900: #222C2A;
-    
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-accent: 'Playfair Display', serif;
-    */
-    
-/*
-    --clr-dark-grey: #2D2D2D;
-    --clr-light-grey: #F2F2F2;
-    --clr-med-grey: #919191;  #919191 
-    --clr-med-light-grey: #dadee0;
-    --clr-nav-bar-light-selection: #E8E8E8;
-    --clr-orange: #FF9035;
-    --clr-med-orange: #ea833d;
-    --clr-dark-blue: #001a26;
-    --clr-med-dark-blue: #023354;
-    
-*/
-    
-/*
-    --ff-accent: 'Indie Flower', sans-serif;
-    --ff-primary: 'Open Sans', serif;
-    --ff-yellow: 'Yellowtail', sans-serif;
-    --ff-open: 'Open Sans', serif;
-    
-*/
-/*    font-size: 62.5%;*/
     --clr-dark: #333;
     --clr-dark-grey: #2D2D2D;
     --ff-accent: 'Merriweather Sans', sans-serif;
@@ -80,11 +49,6 @@ html {
     padding: 20px 0px;
     border-top-style: solid;
     border-top-color: var(--clr-orange);
-    
-/*
-    border-bottom-style: solid;
-    border-color: #d1d0cf;
-*/
 }
 
 .modal-tabs {
@@ -92,25 +56,9 @@ html {
     justify-content: space-between;
 }
 
-/*
-#login-tab {
-    border-radius: 5px 0px 0px 0px;
-}
-
-#signup-tab {
-    border-radius: 0px 5px 0px 0px;
-    border-top-style: solid;
-    border-top-color: var(--clr-orange);
-}
-*/
-
-
-
 .tinted {
     background-color: #ccc7c2;
     border-top-style: none;
-/*    border-bottom-style: solid;*/
-/*    border-color: var(--clr-orange);*/
 }
 
 .modal-tabs div {
@@ -119,14 +67,11 @@ html {
     flex-grow: 1;
 }
 
-
-
 .modal-content {
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     margin: 15% auto; 
-/*    padding: 20px;*/
     width: 80%; 
     font-size: 1.6rem;
     border-radius: 10px;
@@ -148,7 +93,6 @@ html {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
 
 .modal-form .user-error {
     margin: 5px 15px;
@@ -174,12 +118,10 @@ html {
 }
 
 .modal-form button {
-/*    background-color: var(--clr-orange);*/
     background-image: linear-gradient(var(--clr-orange), var(--clr-med-orange));
     border: none;
     font-size: 1.6rem;
     color: white;
-    
 }
 
 .modal-form input[name="username"],
@@ -204,7 +146,5 @@ html {
 @media all and (min-width: 760px) {
     .modal-content {
         width: 534px; 
-
     }
-
 }

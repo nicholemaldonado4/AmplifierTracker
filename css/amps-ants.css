@@ -1,45 +1,4 @@
 :root {
-/*
-    --clr-primary-200: #F3EED9;
-    --clr-primary-400: #824936;
-    --clr-neutral-100: #FFF;
-    --clr-neutral-900: #222C2A;
-    
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-accent: 'Playfair Display', serif;
-    */
-    
-/*
-    --clr-dark-grey: #2D2D2D;
-    --clr-light-grey: #F2F2F2;
-    --clr-med-grey: #919191;  #919191 
-    --clr-med-light-grey: #dadee0;
-    --clr-nav-bar-light-selection: #E8E8E8;
-    --clr-orange: #FF9035;
-    --clr-med-orange: #ea833d;
-    --clr-dark-blue: #001a26;
-    --clr-med-dark-blue: #023354;
-    
-*/
-    
-/*
-    --ff-accent: 'Indie Flower', sans-serif;
-    --ff-primary: 'Open Sans', serif;
-    --ff-yellow: 'Yellowtail', sans-serif;
-    --ff-open: 'Open Sans', serif;
-    
-*/
-/*    font-size: 62.5%;*/
-/*
-    --clr-dark: #333;
-    --clr-dark-grey: #2D2D2D;
-    --ff-accent: 'Merriweather Sans', sans-serif;
-    --ff-primary: 'Merriweather', serif;
-    --ff-title: "Patua One", serif;
-    
-    --clr-orange: #ff9245;
-    --clr-med-orange: #eb8136;
-*/
      --clr-red: #e65d45
 }
 
@@ -52,16 +11,6 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-
-/*
-.search-split {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    
-}
-*/
 
 .page-container {
     height: 100vh; 
@@ -88,7 +37,6 @@ footer button {
         font-size: 1.4rem;
         padding: 1rem;
         border-radius: 5px;
-
 }
 
 .search-form {
@@ -105,7 +53,6 @@ h2 {
     color: var(--clr-red);
     font-family: var(--ff-primary);
 }
-
 
 .search-container {
     margin: 10px 2rem;
@@ -154,8 +101,4 @@ h2 {
 
 .clicked-loc {
     background-color: #ebebeb;
-}
-
-@media all and (min-width: 900px) {
- 
 }

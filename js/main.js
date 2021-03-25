@@ -1,38 +1,11 @@
-//const toggle = document.querySelector(".toggle");
-//const navList = document.querySelector(".nav_bar_list");
 const modal = document.querySelector(".modal");
 const loginBtn = document.getElementById("loginBtn");
-//const submenu = document.querySelector(".has_submenu");
 const signUpTab = document.getElementById("signup-tab");
 const loginTab = document.getElementById("login-tab");
 const signUpDiv = document.getElementById("signup-div");
 const loginDiv = document.getElementById("login-div");
 const closeBox = document.getElementById("close-box");
 const userErrors = document.querySelectorAll(".user-error");
-
-
-//function showToggleMenu() {
-//    if (!navList.classList.contains("active")) {
-//        navList.classList.add("active");
-//    }
-//    
-//}
-//
-//function hideToggleMenu() {
-//    if (navList.classList.contains("active")) {
-//        navList.classList.remove("active");
-//    }
-//    
-//}
-//
-//function toggleSubmenu() {
-//    if (this.classList.contains("submenu_active")) {
-//        this.classList.remove("submenu_active");
-//    }
-//    else {
-//        this.classList.add("submenu_active");
-//    }
-//}
 
 function showLoginModal() {
     if (navList.classList.contains("active")) {
@@ -78,30 +51,14 @@ function showSignUpForm() {
     signUpTab.classList.remove("tinted");
 }
 
-//toggle.addEventListener("mouseenter", showToggleMenu, false);
-//navList.addEventListener("mouseleave", hideToggleMenu, false);
 loginBtn.addEventListener("click", showLoginModal, false);
-//submenu.addEventListener("click", toggleSubmenu, false);
 loginTab.addEventListener("click", showLoginForm, false);
 signUpTab.addEventListener("click", showSignUpForm, false);
 closeBox.addEventListener("click", closeLoginModal, false);
 
-//function setToLoggedOut() {
-//    if (loginBtn.classList.contains("hide")) {
-//        loginBtn.classList.remove("hide");
-//    }
-//    if (!submenu.classList.contains("hide")) {
-//        submenu.classList.add("hide");
-//    }
-//}
-
 $(document).ready(function() {
-    
-    
     $("#loginForm").submit(function(e) {
-        // Prevent event action of going to same page.
         e.preventDefault();
-        // Perform ajax/async http request.
         $.ajax({
             type: "POST",
             url: "../login.php",
@@ -118,9 +75,7 @@ $(document).ready(function() {
     });
     
     $("#signup-form").submit(function(e) {
-        // Prevent event action of going to same page.
         e.preventDefault();
-        // Perform ajax/async http request.
         $.ajax({
             type: "POST",
             url: "../signup.php",
@@ -135,21 +90,4 @@ $(document).ready(function() {
             }
         });
     });
-    
-//    $("#logOutBtn").click(function(e) {
-//        alert("button clicked");
-//        // Prevent event action of going to same page.
-//        e.preventDefault();
-//        // Perform ajax/async http request.
-//        $.ajax({
-//            type: "POST",
-//            url: "../logout.php",
-//            data: $(this).serialize(),
-//            success: function(data) {
-////                alert(data);
-////                setToLoggedOut();
-//                window.location.replace("index.php");
-//            }
-//        });
-//    });
 });
